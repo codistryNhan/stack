@@ -1,17 +1,3 @@
 .table-grid{
   /* border-collapse: collapse; */
 }
-
-.cell {
-  border: solid 2px black;
-  width: 3rem;
-  height: 3rem;
-}
-
-.cell.selected {
-  background-color: black;
-}
-
-.cell.on{
-  background-color: black;
-}

@@ -1,0 +1,11 @@
+.cell {
+  border: solid 2px black;
+}
+
+.cell.selected {
+  background-color: black;
+}
+
+.cell.on{
+  background-color: black;
+}

@@ -10,30 +10,30 @@ function Grid(props) {
   );
 }
 
-function createGrid({x, y, on, selected}) {
-  let rows = [];
+function createGrid({rows, columns, on, selected, cellSize}) {
+  let grid = [];
   let count = 0;
 
-  for(let i = 0; i < y; i++) {
+  for(let i = 0; i < rows; i++) {
     let cells = [];
-    for(let j = 0; j < x; j++) {
+    for(let j = 0; j < columns; j++) {
         let id = `${i}${j}`;
         cells.push(
-          <Cell 
+          <Cell
+            cellSize={cellSize} 
             count={count++} 
-            x={j} 
             id={id}
             on={on.includes(id) ? true : false} 
             selected={selected.includes(id) ? true : false}
           />
         )
     }
-    rows.push(<tr key={i} data-row={i}>{cells}</tr>)
+    grid.push(<tr key={i} data-row={i}>{cells}</tr>)
   }
 
   return(
     <table class="table-grid">
-      {rows}
+      {grid}
     </table>
   );
 }
